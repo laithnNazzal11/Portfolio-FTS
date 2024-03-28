@@ -6,10 +6,8 @@ A social media platform built with [insert languages/technologies used].
 
 - [Description](#description)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 # Description
 This is a personal portfolio website for Me, showcasing his projects, skills, and contact information. The website is built using HTML, CSS, and JavaScript, with additional libraries and frameworks such as Font Awesome.
