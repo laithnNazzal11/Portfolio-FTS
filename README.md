@@ -1,7 +1,5 @@
 # Portfolio
 
-A social media platform built with [insert languages/technologies used].
-
 ## Table of Contents
 
 - [Description](#description)
