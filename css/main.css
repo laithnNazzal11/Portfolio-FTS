@@ -131,7 +131,9 @@ body {
 /* Start Header */
 header {
     background-color: var(--PrimeryColor);
+    position: static;
 
+    
 
 }
 
@@ -249,7 +251,7 @@ header .link ul li:hover a {
  
 }
 
- .top-image{
+.top-image  {
     position: absolute;
     z-index: -1000;
     max-width: 100%;
@@ -618,6 +620,7 @@ header .link ul li:hover a {
     align-items: center;
     margin-bottom: 5%;
 
+
 }
 
 .about .container .title .desc-about-me {
@@ -862,6 +865,7 @@ header .link ul li:hover a {
     align-items: center;
     margin-bottom: 5%;
 
+
 }
 .projects .container  .title p {
     margin: 0;
@@ -873,6 +877,7 @@ header .link ul li:hover a {
     padding: 0;
     margin-bottom: 4%;
     font-size: 2.5rem;
+
    
 }
 
@@ -1049,6 +1054,7 @@ input:focus {
 
 
 
+
 }
 
 @media (max-width: 350px ) {
@@ -1057,6 +1063,17 @@ input:focus {
     }
     .contet .container .title .desc-about-me {
         font-size: .7rem;
+    }
+
+
+
+}
+
+@media (max-width: 360px ) {
+    .contet {
+
+        padding-bottom: 0;
+    
     }
 }
 
