@@ -1,0 +1,1220 @@
+/* Start variables */
+:root {
+    --PrimeryColor: #0A0509;
+    --SeconderyColor: #ffffff;
+    --thirdColor: #797979;
+    --fourthColor: #ebeced;
+    --widthCircleColor: 500px;
+    
+  }
+
+/* End variables */
+
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ /* small */
+@media (min-width:768px) {
+    .container {
+        width:750px;
+    }
+}
+
+ /* medium */
+ @media (min-width:992px) {
+    .container {
+        width:970px;
+    }
+}
+
+
+ /* large */
+ @media (min-width:1200px) {
+    .container {
+        width:1170px;
+    }
+}
+
+
+    
+/* End Global Rules */
+
+/* Start Components */
+ 
+ .colors-rigth {
+    width: var(--widthCircleColor);
+    height: var(--widthCircleColor);
+    position: absolute;
+    border-radius: 50%;
+    background-color: #2e1933;
+    right:  0;
+    top: 50px;
+    filter: blur(250px);
+    z-index: 1;
+    overflow: hidden;
+
+}
+.colors-left-about{
+    width: var(--widthCircleColor);
+    height: var(--widthCircleColor);
+    position: absolute;
+    border-radius: 50%;
+    background-color: #bc66cd;
+    left:  -100px;
+    top: 100px;
+    filter: blur(200px);
+    z-index: -1;
+    overflow: hidden;
+
+}
+
+.colors-left-project{
+    width: var(--widthCircleColor);
+    height: var(--widthCircleColor);
+    position: absolute;
+    border-radius: 50%;
+    background-color: #4b2852;
+    left:  -100px;
+    top: 0;
+    filter: blur(250px); 
+    z-index: -1;
+    overflow: hidden;
+
+}
+.colors-rigth-project {
+    width: var(--widthCircleColor);
+    height: var(--widthCircleColor);
+    position: absolute;
+    border-radius: 50%;
+    background-color: #08442b;
+    right:  -100px;
+    top: 50px;
+    filter: blur(250px);
+    z-index: 1;
+    overflow: hidden;
+
+}
+@media (max-width: 600px ) {
+    .colors-rigth,.colors-rigth-project,.colors-left-project,.colors-left-about {
+        display: none;
+    }
+}
+
+/* End Components */
+
+/* Start Header */
+header {
+    background-color: var(--PrimeryColor);
+    position: static;
+
+    
+
+}
+
+header .container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 767px ) {
+    header .container {
+        flex-direction: row; 
+
+    }
+
+}
+
+
+header .logo  {
+    width:60px;
+    color:var(--SeconderyColor);
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+
+header .logo span {
+    color: #14F195;
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+
+header .container .link ul  {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+header .container .link ul li  {
+    margin-right: 2rem;
+    transition: all .4s ease-in-out;
+
+    
+}
+
+header .container .link ul li  a {
+    text-decoration: none;
+    color: #848895;
+    font-weight: 700;
+    font-size: .9rem;
+    transition: all .4s ease-in-out;
+
+    
+}
+
+@media (min-width: 767px ) {
+
+    header .container .link ul li  a {
+        font-size: 1.2rem;
+
+    }
+
+}
+header .link ul li:hover {
+    transform: scale(1.3);
+}
+header .link ul li:hover a {
+  
+    color: #14F195;
+}
+
+@keyframes logo {
+    from {margin-left: 0;}
+    to {margin-left: 50px}
+    
+  }
+
+  @media (max-width: 420px ) {
+    header .container .link ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .container .link li {
+        font-size: 2rem;
+        margin-right: 0;
+        height: 20%;
+    }
+  }
+
+
+
+/* End Header */
+
+/* Start landing */
+.landing {
+    margin-top: 0;
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-color: var(--PrimeryColor);
+    color: var(--SeconderyColor);
+    position: relative;
+    z-index: 1; 
+
+ 
+}
+
+.top-image  {
+    position: absolute;
+    z-index: -1000;
+    max-width: 100%;
+  
+}
+  .ball {
+
+    z-index: 500;
+    width: 50px;
+    height: 50px;
+    right: 27%;
+    top: 50%;
+    animation-name: ball;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+
+   
+}
+
+.ball2 {
+
+    z-index: 500;
+    width: 50px;
+    height: 50px;
+    right: 27%;
+    top: 50%;
+    animation-name: ball2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+    z-index: 500;
+
+
+   
+}
+
+
+@keyframes ball2{ 
+    from { transform: rotate(0deg) translateX(170px) rotate(0deg); }
+    to   { transform: rotate(180deg) translateX(170px) rotate(-180deg); }
+} 
+@keyframes ball{ 
+    from { transform: rotate(-220deg) translateX(170px) rotate(220deg); }
+    to   { transform: rotate(0deg) translateX(170px) rotate(0); }
+} 
+/* 
+@keyframes ball {
+    0%   {top: 20%;right: 40%;}
+    20%  {top: 85%;right: 50%;}
+    50%  {top: 50%;right: 5%;}
+    70% {top: 5%;right: 50%;}
+    100% {top: 20%;right: 40%;}
+
+    
+  }
+
+  @keyframes ball2 {
+    0%   {top: 20%;right: 30%;}
+    20%  {top: 85%;right: 50%;}
+    50%  {top: 50%;right: 95%;}
+    70% {top: 5%;right: 20%;}
+    100% {top: 20%;right: 30%;}
+    
+  } */
+
+
+
+
+
+
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    gap:10%
+}
+
+
+.landing .left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+.landing .left p{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #C4C4C4;
+}
+.landing .left h1{
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 4rem;
+    
+}
+.landing .left h1 span {
+    transition:  all 1s ease-in-out;
+    animation-name: Color;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+
+}
+.landing .left h1 span:hover{
+    color: #14F195;
+    
+}
+
+.landing .left .buttonHome button {
+    margin-top: 4%;
+    padding: 2% 4%;
+    border-radius: 15px;
+    margin-right: 4%;
+    border: none;
+   
+}
+
+.landing .left .buttonHome button a{
+   color: white;
+   text-decoration: none;
+   display: inline-block;
+   
+   
+}
+.landing .left .buttonHome:hover {
+    cursor: pointer;
+    
+}
+
+
+.landing .left .buttonHome .download {
+    background-color: #14F195;
+    color:#0A0509;
+    transition: all .5s ease-in-out;
+
+}
+
+
+.landing .left .buttonHome .download:hover{
+    cursor: pointer;
+    background-color: #0A0509;
+    color: #14F195;
+}
+
+.landing .left .contact {
+    background-color: var(--PrimeryColor);
+    color: var(--SeconderyColor);
+    border: 1px solid var(--SeconderyColor);
+
+}
+.landing .left .buttonHome .contact:hover  {
+    background-color: var(--SeconderyColor);
+    transition: all .5s ease-in-out;
+
+}
+
+
+.landing .left .buttonHome .contact a  {
+    transition: all .5s ease-in-out;
+
+}
+.landing .left .buttonHome .contact:hover a  {
+    color: var(--PrimeryColor);
+
+}
+
+
+
+
+.landing .rigth {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+
+
+}
+.landing .rigth .image {
+    position: relative;
+    left: 0;
+    width: 85%;
+    cursor: pointer;
+    z-index: 1000;
+    transition:  all 1s ease-in-out;
+    overflow: hidden;
+    filter: drop-shadow(0px 0px 20px #14f19552) grayscale(100%) contrast(100%) ;
+    overflow: hidden;
+   
+
+
+}
+
+.landing .rigth .image:hover{
+    left: -50px;
+    filter: drop-shadow(5px 5px 50px #14f19552) grayscale(0%) ;
+    
+}
+
+
+
+.landing .rigth .image:hover .ball2{
+    animation: none;
+     
+} 
+
+.backgroundColor{
+    animation-name: topDown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+}
+
+
+@media (max-width: 993px ) {
+    .landing .container {
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: flex-start;
+    }
+    .landing .rigth .image{
+        width: 50%;
+    }
+    .landing .left {
+        margin-top: 10%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 40%;
+    
+    }
+    .landing .buttonHome {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+    .landing .rigth {
+        width: 100%;
+        height: 135%;
+
+    
+    }
+
+    .landing .rigth img {
+        position: relative;
+        top: 0;
+    }
+
+    .landing .left h1{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-size: 2.5rem;
+    }
+    .colors-left-about{
+        filter: blur(300px);
+        top:200px;
+        left: -450px;
+    }
+
+    .colors-rigth-project{
+        display: none;
+    }
+
+  
+}
+
+@media (max-width: 767px ) {
+    .landing .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        gap:5%
+    }
+
+    .landing .rigth .image:hover{
+        transform: scale(1.1);
+        left: -3px;
+        
+        filter: drop-shadow(5px 5px 50px #14f19552) grayscale(0%) ;
+        
+    }
+    
+    .landing .top-image {
+        display: none;
+    }
+    .landing .rigth {
+        height: 100%;
+        width: 100%;
+    }
+    .landing .rigth .image{
+        width: 50%;
+    }
+
+
+
+}
+
+@media (max-width: 660px ){
+    .landing .buttonHome {
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .landing .rigth .image{
+        width: 60%;
+    }
+
+}
+
+@keyframes Color {
+    from {color: white;}
+    to {color: #14F195;}
+  }
+
+  @keyframes topDown {
+    from {margin-top: -60px;}
+    to {margin-top: 0;}
+  }  
+  
+
+/* End landing */
+
+
+/* Start About */
+.about {
+    padding-top: 50px;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--SeconderyColor);
+    color: var(--PrimeryColor);
+    position: relative;
+
+}
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.about .container .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+
+
+}
+
+.about .container .title .desc-about-me {
+    font-weight: 300;
+    text-align: center;
+    margin-top: 3%;
+    width: 80%;
+}
+
+.about .container .title p {
+    margin: 0;
+    padding: 0;
+    color: var(--thirdColor);
+}
+.about .container .title h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+}
+
+.about .container .button-about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about .container .button-about-me button {
+    cursor: pointer;
+    margin-top: 1%;
+    padding: 2% 4%;
+    border-radius: 15px;
+    margin-right: 4%;
+    border: none;
+
+}
+
+.about .container .button-about-me  .active {
+    background-color: var(--PrimeryColor);
+    background-color: #0A0509;
+    color: var(--SeconderyColor);
+    cursor: pointer;
+ 
+
+
+}
+
+
+
+.about .container .content  {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about .container .content .desc-about-me {
+    font-weight: 300;
+    text-align: center;
+    margin-top: 3%;
+    width: 80%;
+
+}
+.about .container .content .information {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.about .container .content .information h4 {
+    font-weight: 400;
+    transition: all .4s ease-in-out;
+}
+.about .container .content .information h4:hover {
+    color: #0ebe75;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+/* skils styls */
+#allskils{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    
+
+}
+.skils {
+    display: flex;
+    justify-content: space-between;
+     flex: 1;
+     flex-wrap: wrap;
+    align-items: center;
+    
+}
+#allskils .prog-holder {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    width: 40%;
+
+}
+
+ #allskils .prog-holder h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    
+}
+
+ #allskils .prog-holder .prog{
+    background-color: #dedadc;
+    height: 30px;
+
+    
+}
+
+ #allskils .prog-holder .prog span{
+  display: block;
+  background-color: #14F195;
+  height: 100%;
+  position: relative;
+  
+    
+}
+
+ #allskils .prog-holder .prog span::before{
+    content: attr(data-progress);
+    display: flex;
+    color:white;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    background-color: #1f2021;
+    width:30px;
+    height: 20px;
+    right: -15px;
+    top:-30px;
+
+    
+}
+
+ #allskils .prog-holder .prog span::after{
+    content: "";
+    position: absolute;
+    border-color: #1f2021 transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+    right: -10px;
+    top:-15px;
+
+}
+@media (max-width: 390px ){
+    #allskils .prog-holder {
+        margin-bottom: 1%;
+        margin-top: 1%;
+        width: 100%;
+    
+    }
+    .about .container .title {
+        font-size: .7rem;
+        
+    }
+    .about .container .title h1{
+        font-size: 1.8rem;
+    }
+    .about .container .title .desc-about-me {
+        font-size: .4; 
+    }
+
+}
+/*  End skils styls */
+
+@media (max-width: 767px ) {
+    .about .container .title .desc-about-me  {
+        font-size: .7rem;
+    }
+    .about .container .content .information {
+        flex-direction: column;
+        display: flex;
+        /* align-items: flex-start; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .about .container .content .information div {
+    
+        width: 100%;
+    }
+
+    .about .container .content .information div h4{
+        text-align: center;
+         
+    }
+    
+}
+
+@media (max-width: 355px ) {
+    .about .container .content .desc-about-me {
+
+     font-size: .7rem;
+    
+    }
+    .about .container .button-about-me button {
+        font-size: .7rem;
+    }
+
+}
+
+/* End About */
+
+/* Start PROJECTS */
+.projects {
+    padding-top: 50px;
+    width: 100%;
+    background-color: var(--PrimeryColor);
+    color: var(--SeconderyColor);
+    position: relative;
+
+
+}
+
+
+.projects .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.projects .container .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+
+
+}
+.projects .container  .title p {
+    margin: 0;
+    padding: 0;
+    color: var(--thirdColor);
+}
+.projects .container .title  h1 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 4%;
+    font-size: 2.5rem;
+
+   
+}
+
+.projects .container .title .desc-about-me-project {
+    width: 70%;
+    text-align: center;
+}
+
+.projects .container .my-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    position: relative;
+ 
+
+}
+.projects .container .my-work .my-work-image{
+    flex: 1;
+}
+
+.projects .container .my-work .my-work-image img{
+    width: 100%;
+  
+    transition: all .5s ease-in-out;
+    filter: drop-shadow(0px 0px 20px #14f19552) grayscale(100%) contrast(100%) ;
+}
+
+.projects .container .my-work-image img:hover  {
+
+    transform: scale(1.1) rotate(3deg);
+    left: -3px;
+    filter: drop-shadow(5px 5px 50px #14f19552) grayscale(0%) ;
+    
+}
+
+
+
+.projects .container .my-work .my-work-text {
+    flex: 1;
+}
+
+.projects .container .my-work .my-work-text p {
+    width: 85%;
+    color: var(--thirdColor);
+}
+
+
+@media (max-width: 767px ) {
+    .projects .container .my-work {
+        flex-direction: column;
+        text-align: center;
+    }
+    .projects .container .my-work .my-work-text p {
+        width: 100%;
+        
+    }
+    .projects .container .my-work .my-work-image  {
+        width: 80%;
+        order: -2;
+    }
+    .projects .container .my-work  .my-work-text{
+        order: -1;
+    }
+    .projects .container  .title p {
+        text-align: center;
+    }
+
+}
+
+/* End PROJECTS */
+
+
+/* Start Contact */
+.contet {
+    padding-top: 50px;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--SeconderyColor);
+    color: var(--PrimeryColor);
+    position: relative;
+    padding-bottom: 800px;
+    transition: all 2s ease-in-out;
+
+}
+
+.contet .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.contet .container .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+
+}
+
+
+.contet .container p,h1 {
+    padding: 0;
+    margin: 0;
+
+}
+
+.contet .container .title .desc-about-me {
+    font-weight: 300;
+    text-align: center;
+    margin-top: 3%;
+    width: 80%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content input,textarea {
+    width: 100%;
+    display: inline-block;
+    padding: 2%;
+    margin: 1%;
+    background-color: #f0f0f0;
+    border: none;
+}
+
+textarea {
+   height: 100%;
+}
+
+input::placeholder,textarea::placeholder,label {
+    color: #b3a5a3;
+}
+label{
+    align-self: flex-start;
+}
+
+input:focus {
+    border: 3px solid #555;
+}
+.content button {
+    cursor: pointer;
+    margin-top: 1%;
+    padding: 2% 4%;
+    border-radius: 15px;
+    border: none;
+    background-color: #0ebe75;
+    color: white;
+    transition: all .4s ease-in;
+    align-self: center;
+}
+
+.content button:hover{
+    background-color: #0d8955;
+}
+
+@media (max-width: 767px ) {
+    .content input,textarea {
+        margin: 4%;
+    }
+    .content button {
+        padding: 6% 10%;
+    }
+
+
+
+
+}
+
+@media (max-width: 350px ) {
+    .contet{
+        padding-bottom: 0;
+    }
+    .contet .container .title .desc-about-me {
+        font-size: .7rem;
+    }
+
+
+
+}
+
+@media (max-width: 360px ) {
+    .contet {
+
+        padding-bottom: 0;
+    
+    }
+}
+
+
+
+
+/* End Contact */
+
+
+/* Star Footer */
+footer{
+    padding-top: 50px;
+    width: 100%;
+    background-color: var(--PrimeryColor);
+    color: var(--SeconderyColor);
+    position: relative;
+    padding-bottom: 50px;
+
+
+}
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer p:not(.copyrigth) {
+
+    text-transform:uppercase;
+    font-weight: normal;
+    font-size: 20px;
+    position: relative;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: 20px auto;
+    padding:20px;
+
+    
+}
+
+footer .copyrigth{
+    margin-top: 20px;
+    line-height: 2;
+    letter-spacing: 1.5;
+    font-weight: 100;
+}
+
+
+
+.footer .social-icons {
+    
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+
+}
+.socialMedia {
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 1s ease-in-out;
+
+}
+.socialMedia:hover {
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+   
+}
+.fa-facebook-f {
+    transition: all .5s ease-in-out;
+    color: white;
+
+}
+.fa-facebook-f:hover{
+    color: blue;
+    font-size: xx-large;
+
+}
+.fa-instagram{
+    transition: all .5s ease-in-out;
+    color: white;
+    
+}
+.fa-instagram:hover{
+     color: #ff15b6;
+     font-size: xx-large;
+}
+.fa-linkedin{
+    transition: all .5s ease-in-out;
+    color: white;
+ 
+}
+.fa-linkedin:hover{
+    color: #0965c1;
+    font-size: xx-large;
+}
+footer .social-icons i {
+
+    align-self: center;
+
+
+}
+
+
+footer .copyrigth span{
+    color: #14F195;
+}
+
+
+/* End Footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
